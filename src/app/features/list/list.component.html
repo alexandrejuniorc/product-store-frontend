@@ -1,9 +1,14 @@
-<p>list works!</p>
-
 <ul>
   @for (product of products; track product.id) {
-  <li>
-    {{ product.title }}
-  </li>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="mat-mdc-card-header-text">{{ product.title }}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
   }
 </ul>
