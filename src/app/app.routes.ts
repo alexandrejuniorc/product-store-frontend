@@ -1,9 +1,6 @@
 import {
-  ActivatedRouteSnapshot,
-  MaybeAsync,
-  ResolveData,
-  RouterStateSnapshot,
-  Routes,
+  ActivatedRouteSnapshot, RouterStateSnapshot,
+  Routes
 } from '@angular/router';
 import { ListComponent } from './features/list/list.component';
 import { inject } from '@angular/core';
@@ -33,7 +30,7 @@ export const routes: Routes = [
       },
     },
     loadComponent: () =>
-      import('./features/edit/edit.component').then(
+      import('./features/edit-product/edit-product.component').then(
         (module) => module.EditComponent
       ),
   },
