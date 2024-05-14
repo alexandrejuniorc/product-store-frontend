@@ -45,7 +45,7 @@ export class CreateProductComponent {
         title: this.form.controls.title.value,
       })
       .subscribe(() => {
-        this.matSnackBar.open('Produto criado com sucesso!', 'Fechar');
+        this.matSnackBar.open('Produto foi criado com sucesso!', 'Fechar');
         this.router.navigate(['/']);
       });
   }
