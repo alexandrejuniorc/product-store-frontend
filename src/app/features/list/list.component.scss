@@ -3,3 +3,10 @@
   justify-content: flex-end;
   padding: 16px 0;
 }
+
+.cards-container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
