@@ -14,8 +14,8 @@ import { NoItemsComponent } from './components/no-items/no-items.component';
   selector: 'app-list',
   standalone: true,
   imports: [CardComponent, RouterLink, MatButtonModule, NoItemsComponent],
-  templateUrl: './list.component.html',
-  styleUrl: './list.component.scss',
+  templateUrl: './list-products.component.html',
+  styleUrl: './list-products.component.scss',
 })
 export class ListComponent {
   products = signal<Product[]>(

@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { ListComponent } from './features/list/list.component';
+import { ListComponent } from './features/list-products/list-products.component';
 import { getProducts } from './shared/resolvers/get-products.resolver';
 import { getProduct } from './shared/resolvers/get-product.resolver';
 
