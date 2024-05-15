@@ -4,11 +4,12 @@ import { ProductsService } from '../../shared/services/products.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../shared/@types/product.interface';
 import { FormComponent } from '../../shared/components/form/form.component';
+import { BackToListComponent } from '../../shared/components/back-to-list/back-to-list.component';
 
 @Component({
   selector: 'app-edit-product',
   standalone: true,
-  imports: [FormComponent],
+  imports: [FormComponent, BackToListComponent],
   templateUrl: './edit-product.component.html',
   styleUrl: './edit-product.component.scss',
 })
