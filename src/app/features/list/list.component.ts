@@ -8,16 +8,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteConfirmationDialogService } from '../../shared/services/delete-confirmation-dialog.service';
 import { filter } from 'rxjs';
+import { NoItemsComponent } from './components/no-items/no-items.component';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CardComponent, RouterLink, MatButtonModule],
+  imports: [CardComponent, RouterLink, MatButtonModule, NoItemsComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss',
 })
 export class ListComponent {
-  products = signal<Product[]>(inject(ActivatedRoute).snapshot.data['products']);
+  products = signal<Product[]>(
+    inject(ActivatedRoute).snapshot.data['products']
+  );
   productsService = inject(ProductsService);
   deleteConfirmationDialogService = inject(DeleteConfirmationDialogService);
   router = inject(Router);

@@ -5,7 +5,13 @@
 </div>
 
 <ul class="cards-container">
-  @for (product of products(); track product.id) {
-  <app-card [product]="product" (edit)="onEdit(product.id)" (delete)="onDelete(product.id)"></app-card>
-  }
+  @for (product of products(); track product.id) { @defer (on immediate) {
+  <app-card
+    [product]="product"
+    (edit)="onEdit(product.id)"
+    (delete)="onDelete(product.id)"
+  ></app-card>
+  } } @empty { @defer (on immediate) {
+  <app-no-items></app-no-items>
+  } }
 </ul>
